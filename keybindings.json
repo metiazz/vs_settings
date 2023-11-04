@@ -1,0 +1,113 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "f7",
+        "command": "-extension.CustomCompileRun"
+    },
+    {
+        "key": "alt+j",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+down",
+        "command": "-editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+k",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+up",
+        "command": "-editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+enter",
+        "command": "r.runSelection",
+        "when": "editorTextFocus && editorLangId == 'r'"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-r.runSelection",
+        "when": "editorTextFocus && editorLangId == 'r'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "r.runSelection",
+        "when": "editorTextFocus && editorLangId == 'rmd'"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-r.runSelection",
+        "when": "editorTextFocus && editorLangId == 'rmd'"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "r.runSelectionRetainCursor",
+        "when": "editorTextFocus && editorLangId == 'r'"
+    },
+    {
+        "key": "alt+enter",
+        "command": "-r.runSelectionRetainCursor",
+        "when": "editorTextFocus && editorLangId == 'r'"
+    },
+    {
+        "key": "alt+,",
+        "command": "type",
+        "args": {
+            "text": "<- "
+        },
+        "when": "editorTextFocus && editorLangId == 'rmd' || terminalFocus"
+    },
+    {
+        "key": "alt+,",
+        "command": "type",
+        "args": {
+            "text": "<- "
+        },
+        "when": "editorTextFocus && editorLangId == 'r' || terminalFocus"
+    },
+    {
+        "key": "alt+.",
+        "command": "type",
+        "args": {
+            "text": "%>% "
+        },
+        "when": "editorTextFocus && editorLangId == 'rmd' || terminalFocus"
+    },
+    {
+        "key": "alt+.",
+        "command": "type",
+        "args": {
+            "text": "%>% "
+        },
+        "when": "editorTextFocus && editorLangId == 'r' || terminalFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-extension.vim_ctrl+d",
+        "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
+    },
+    {
+        "key": "v v",
+        "command": "extension.vim_ctrl+v",
+        "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "-extension.vim_ctrl+v",
+        "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl"
+    }
+]

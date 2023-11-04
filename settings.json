@@ -1,0 +1,75 @@
+{
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<esc>"
+            ]
+        }
+    ],
+    "window.restoreWindows": "all",
+    "vim.useCtrlKeys": false,
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnSave": true,
+    "tabnine.experimentalAutoImports": true,
+    "explorer.confirmDragAndDrop": false,
+    "go.autocompleteUnimportedPackages": true,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "go.toolsManagement.autoUpdate": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "workbench.startupEditor": "none",
+    "jupyter.askForKernelRestart": false,
+    "explorer.confirmDelete": false,
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "git.enableSmartCommit": true,
+    "r.bracketedPaste": true,
+    "notebook.lineNumbers": "on",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "right"
+    },
+    "r.plot.useHttpgd": true,
+    "r.rterm.linux": "/bin/radian",
+    "r.plot.defaults.plotPreviewLayout": "scroll",
+    "settingsSync.keybindingsPerPlatform": false,
+    "r.rterm.windows": "C:\\Users\\mati-yoga\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\radian.exe",
+    "editor.fontSize": 16,
+    "jupyter.kernels.filter": [],
+    "vscode-office.openOutline": true,
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "switch:command",
+        "stash-push:command"
+    ],
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "git.openRepositoryInParentFolders": "always",
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": false,
+    "vim.handleKeys": {
+        "<C-v>": true,
+        "<C-d>": true,
+        "<C-s>": false,
+        "<C-z>": false
+    },
+    // "r.rterm.linux": "~/.local/lib/python3.10/site-packages/radian", //Use this only for Linux
+    // "r.lsp.debug": true,
+    // "r.lsp.diagnostics": true,
+    // "r.rterm.option": [
+    //     "--no-save",
+    //     "--no-restore",
+    //     "--r-binary=*Path to R executable*"
+    // ],
+}
