@@ -39,7 +39,6 @@
     "r.rterm.linux": "/bin/radian",
     "r.plot.defaults.plotPreviewLayout": "scroll",
     "settingsSync.keybindingsPerPlatform": false,
-    "r.rterm.windows": "C:\\Users\\mati-yoga\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\radian.exe",
     "editor.fontSize": 16,
     "jupyter.kernels.filter": [],
     "vscode-office.openOutline": true,
@@ -64,12 +63,5 @@
         "<C-s>": false,
         "<C-z>": false
     },
-    // "r.rterm.linux": "~/.local/lib/python3.10/site-packages/radian", //Use this only for Linux
-    // "r.lsp.debug": true,
-    // "r.lsp.diagnostics": true,
-    // "r.rterm.option": [
-    //     "--no-save",
-    //     "--no-restore",
-    //     "--r-binary=*Path to R executable*"
-    // ],
+    "python.analysis.autoImportCompletions": true,
 }
