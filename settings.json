@@ -1,67 +1,78 @@
 {
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<esc>"
-            ]
-        }
-    ],
-    "window.restoreWindows": "all",
-    "vim.useCtrlKeys": false,
-    "files.autoSave": "onFocusChange",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "editor.fontSize": 16,
     "editor.formatOnSave": true,
-    "tabnine.experimentalAutoImports": true,
-    "explorer.confirmDragAndDrop": false,
-    "go.autocompleteUnimportedPackages": true,
     "editor.rulers": [
         80,
         120
     ],
-    "go.toolsManagement.autoUpdate": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.autoSave": "onFocusChange",
     "git.autofetch": true,
     "git.confirmSync": false,
-    "workbench.startupEditor": "none",
-    "jupyter.askForKernelRestart": false,
-    "explorer.confirmDelete": false,
-    "terminal.integrated.defaultProfile.linux": "fish",
     "git.enableSmartCommit": true,
-    "r.bracketedPaste": true,
-    "notebook.lineNumbers": "on",
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "right"
-    },
-    "r.plot.useHttpgd": true,
-    "r.rterm.linux": "/bin/radian",
-    "r.plot.defaults.plotPreviewLayout": "scroll",
-    "settingsSync.keybindingsPerPlatform": false,
-    "editor.fontSize": 16,
-    "jupyter.kernels.filter": [],
-    "vscode-office.openOutline": true,
+    "git.openRepositoryInParentFolders": "always",
     "gitlens.gitCommands.skipConfirmations": [
         "fetch:command",
         "switch:command",
         "stash-push:command"
     ],
-    "[python]": {
-        "editor.formatOnType": true
+    "go.autocompleteUnimportedPackages": true,
+    "go.toolsManagement.autoUpdate": true,
+    "julia.enableTelemetry": false,
+    "julia.symbolCacheDownload": true,
+    "jupyter.askForKernelRestart": false,
+    "jupyter.kernels.filter": [],
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "right"
     },
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
-    "git.openRepositoryInParentFolders": "always",
+    "notebook.lineNumbers": "on",
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.inlayHints.callArgumentNames": "all",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.typeCheckingMode": "strict",
+    "r.bracketedPaste": true,
+    "r.plot.defaults.plotPreviewLayout": "scroll",
+    "r.plot.useHttpgd": true,
+    "r.rterm.linux": "/bin/radian",
+    "settingsSync.keybindingsPerPlatform": false,
+    "tabnine.experimentalAutoImports": true,
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
     ],
-    "julia.symbolCacheDownload": true,
-    "julia.enableTelemetry": false,
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
     "vim.handleKeys": {
-        "<C-v>": true,
         "<C-d>": true,
         "<C-s>": false,
+        "<C-v>": true,
         "<C-z>": false
     },
-    "python.analysis.autoImportCompletions": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "after": [
+                "<esc>"
+            ],
+            "before": [
+                "j",
+                "j"
+            ]
+        }
+    ],
+    "vim.smartRelativeLine": true,
+    "vim.useCtrlKeys": false,
+    "vscode-office.openOutline": true,
+    "window.restoreWindows": "all",
+    "workbench.startupEditor": "none"
 }
