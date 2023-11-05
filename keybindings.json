@@ -101,7 +101,7 @@
         "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
     },
     {
-        "key": "v v",
+        "key": "ctrl+alt+v",
         "command": "extension.vim_ctrl+v",
         "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl && vim.mode != 'Insert'"
     },
