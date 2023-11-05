@@ -63,4 +63,5 @@
         "<C-s>": false,
         "<C-z>": false
     },
+    "python.analysis.autoImportCompletions": true,
 }
