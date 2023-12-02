@@ -177,4 +177,14 @@
         "command": "workbench.action.nextEditorInGroup",
         "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
     },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    }
 ]
