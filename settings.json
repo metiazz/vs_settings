@@ -1,11 +1,11 @@
 {
-    "[python]": {
-        "editor.formatOnType": true
+    "[julia]": {
+        "editor.defaultFormatter": "julialang.language-julia"
     },
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
     },
-    "editor.fontSize": 16,
+    "editor.fontSize": 14,
     "editor.formatOnSave": true,
     "editor.rulers": [
         80,
@@ -13,6 +13,9 @@
     ],
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    "files.associations": {
+        "*.rmd": "markdown"
+    },
     "files.autoSave": "onFocusChange",
     "git.autofetch": true,
     "git.confirmSync": false,
@@ -23,12 +26,9 @@
         "switch:command",
         "stash-push:command"
     ],
-    "go.autocompleteUnimportedPackages": true,
-    "go.toolsManagement.autoUpdate": true,
     "julia.enableTelemetry": false,
     "julia.symbolCacheDownload": true,
     "jupyter.askForKernelRestart": false,
-    "jupyter.kernels.filter": [],
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "right"
@@ -37,7 +37,7 @@
     "python.analysis.autoFormatStrings": true,
     "python.analysis.autoImportCompletions": true,
     "python.analysis.completeFunctionParens": true,
-    "python.analysis.inlayHints.callArgumentNames": "all",
+    "python.analysis.inlayHints.callArgumentNames": "partial",
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.pytestParameters": true,
     "python.analysis.inlayHints.variableTypes": true,
@@ -47,17 +47,21 @@
     "r.plot.useHttpgd": true,
     "r.rterm.linux": "/bin/radian",
     "settingsSync.keybindingsPerPlatform": false,
-    "tabnine.experimentalAutoImports": true,
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
     ],
     "terminal.integrated.defaultProfile.linux": "fish",
     "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "vim.useCtrlKeys": false,
     "vim.handleKeys": {
+        "<C-r>": true,
+        "<C-u>": true,
         "<C-d>": true,
         "<C-s>": false,
         "<C-v>": true,
-        "<C-z>": false
+        "<C-z>": false,
+        "<C-c>": false,
+        "<C-l>": false,
     },
     "vim.insertModeKeyBindings": [
         {
@@ -70,9 +74,21 @@
             ]
         }
     ],
+    "vim.leader": " ",
+    "vim.normalModeKeyBindings": [
+        {
+            "after": "<leader>yy",
+            "before": "+yy"
+        },
+        {
+            "after": "<leader>p",
+            "before": "+p"
+        }
+    ],
     "vim.smartRelativeLine": true,
-    "vim.useCtrlKeys": false,
+    "vim.useSystemClipboard": false,
     "vscode-office.openOutline": true,
+    "vim.easymotion": true,
     "window.restoreWindows": "all",
     "workbench.startupEditor": "none"
 }
