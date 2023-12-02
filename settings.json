@@ -90,5 +90,7 @@
     "vscode-office.openOutline": true,
     "vim.easymotion": true,
     "window.restoreWindows": "all",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    // "vim.vimrc.enable": true,
+    // "vim.vimrc.path": ".vimrc"
 }
