@@ -327,31 +327,31 @@
         "command": "workbench.view.scm",
         "when": "workbench.scm.active && editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
     },
-    {
-        "key": "s",
-        "command": "git.stage",
-        "when": "(sideBarFocus && activeViewlet == 'workbench.view.scm') || (activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus)"
-    },
-    {
-        "key": "a",
-        "command": "git.stageAll",
-        "when": "(sideBarFocus && activeViewlet == 'workbench.view.scm') || (activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus)"
-    },
-    {
-        "key": "c",
-        "command": "git.commitStaged",
-        "when": "(sideBarFocus && activeViewlet == 'workbench.view.scm') || (activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus)"
-    },
-    {
-        "key": "shift+p",
-        "command": "git.push",
-        "when": "(sideBarFocus && activeViewlet == 'workbench.view.scm') || (activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus)"
-    },
-    {
-        "key": "p",
-        "command": "git.pull",
-        "when": "(sideBarFocus && activeViewlet == 'workbench.view.scm') || (activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus)"
-    },
+    // {
+    //     "key": "s",
+    //     "command": "git.stage",
+    //     "when": "(sideBarFocus && activeViewlet == 'workbench.view.scm') || (activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus)"
+    // },
+    // {
+    //     "key": "a",
+    //     "command": "git.stageAll",
+    //     "when": "(sideBarFocus && activeViewlet == 'workbench.view.scm') || (activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus)"
+    // },
+    // {
+    //     "key": "c",
+    //     "command": "git.commitStaged",
+    //     "when": "(sideBarFocus && activeViewlet == 'workbench.view.scm') || (activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus)"
+    // },
+    // {
+    //     "key": "shift+p",
+    //     "command": "git.push",
+    //     "when": "(sideBarFocus && activeViewlet == 'workbench.view.scm') || (activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus)"
+    // },
+    // {
+    //     "key": "p",
+    //     "command": "git.pull",
+    //     "when": "(sideBarFocus && activeViewlet == 'workbench.view.scm') || (activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus)"
+    // },
     {
         "key": "ctrl+space k",
         "command": "workbench.action.moveEditorToNextGroup"
