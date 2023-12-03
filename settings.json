@@ -85,6 +85,7 @@
             "before": "+p"
         }
     ],
+    // "vim."
     "vim.smartRelativeLine": true,
     "vim.useSystemClipboard": false,
     "vscode-office.openOutline": true,

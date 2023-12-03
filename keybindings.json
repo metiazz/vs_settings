@@ -103,7 +103,7 @@
     {
         "key": "ctrl+alt+v",
         "command": "extension.vim_ctrl+v",
-        "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl && vim.mode != 'Insert'"
+        "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl && (vim.mode == 'Normal' || vim.mode == 'Visual')"
     },
     {
         "key": "ctrl+v",
@@ -128,7 +128,7 @@
     {
         "key": "space j",
         "command": "workbench.action.focusLeftGroup",
-        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+        "when": "(editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')) || explorerViewletFocus "
     },
     {
         "key": "ctrl+k ctrl+left",
@@ -137,7 +137,7 @@
     {
         "key": "space k",
         "command": "workbench.action.focusRightGroup",
-        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+        "when": "(editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')) || explorerViewletFocus "
     },
     {
         "key": "ctrl+k ctrl+right",
@@ -146,7 +146,7 @@
     {
         "key": "space e",
         "command": "workbench.view.explorer",
-        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
     },
     {
         "key": "ctrl+l",
@@ -175,7 +175,7 @@
     {
         "key": "tab",
         "command": "workbench.action.nextEditorInGroup",
-        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
     },
     {
         "key": "ctrl+j",
@@ -186,5 +186,170 @@
         "key": "ctrl+k",
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "inQuickOpen"
+    },
+    {
+        "key": "space shift+h",
+        "command": "vscode-harpoon.addEditor",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space shift+a",
+        "command": "vscode-harpoon.addEditor1",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space shift+s",
+        "command": "vscode-harpoon.addEditor2",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space shift+d",
+        "command": "vscode-harpoon.addEditor3",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space shift+f",
+        "command": "vscode-harpoon.addEditor4",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space shift+g",
+        "command": "vscode-harpoon.addEditor5",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space h",
+        "command": "vscode-harpoon.editorQuickPick",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space a",
+        "command": "vscode-harpoon.gotoEditor1",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space s",
+        "command": "vscode-harpoon.gotoEditor2",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space d",
+        "command": "vscode-harpoon.gotoEditor3",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space f",
+        "command": "vscode-harpoon.gotoEditor4",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space g",
+        "command": "vscode-harpoon.gotoEditor5",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "g d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && isWeb && !isInEmbeddedEditor &&editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "ctrl+f12",
+        "command": "-editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && isWeb && !isInEmbeddedEditor"
+    },
+    {
+        "key": "g i",
+        "command": "editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor && editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "ctrl+f12",
+        "command": "-editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "g i",
+        "command": "editor.action.peekImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor && editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "ctrl+shift+f12",
+        "command": "-editor.action.peekImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "g r",
+        "command": "references-view.findReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "shift+alt+f12",
+        "command": "-references-view.findReferences",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "g b",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack && editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "ctrl+alt+-",
+        "command": "-workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "g d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor && editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "g g",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus && !isInEmbeddedEditor && editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space c",
+        "command": "workbench.files.action.collapseExplorerFolders",
+        "when": "explorerViewletFocus "
+    },
+    {
+        "key": "space n",
+        "command": "explorer.newFile",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "space m",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus "
+    },
+    {
+        "key": "space g",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active && editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "s",
+        "command": "git.stage",
+        "when": "(sideBarFocus && activeViewlet == 'workbench.view.scm') || (activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus)"
+    },
+    {
+        "key": "a",
+        "command": "git.stageAll",
+        "when": "(sideBarFocus && activeViewlet == 'workbench.view.scm') || (activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus)"
+    },
+    {
+        "key": "c",
+        "command": "git.commitStaged",
+        "when": "(sideBarFocus && activeViewlet == 'workbench.view.scm') || (activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus)"
+    },
+    {
+        "key": "shift+p",
+        "command": "git.push",
+        "when": "(sideBarFocus && activeViewlet == 'workbench.view.scm') || (activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus)"
+    },
+    {
+        "key": "p",
+        "command": "git.pull",
+        "when": "(sideBarFocus && activeViewlet == 'workbench.view.scm') || (activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus)"
     }
 ]
