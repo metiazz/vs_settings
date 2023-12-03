@@ -351,5 +351,21 @@
         "key": "p",
         "command": "git.pull",
         "when": "(sideBarFocus && activeViewlet == 'workbench.view.scm') || (activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus)"
+    },
+    {
+        "key": "ctrl+space k",
+        "command": "workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "ctrl+alt+right",
+        "command": "-workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "ctrl+space j",
+        "command": "workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+alt+left",
+        "command": "-workbench.action.moveEditorToPreviousGroup"
     }
 ]
