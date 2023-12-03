@@ -1,6 +1,35 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    {
+        "key": "l",
+        "command": "list.expand", // List. refer to e.g. search Lists and usages Lists
+        "when": "vim.active && listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "selectNext Suggestion", //code suggestion selection
+        "when": "vim.active && suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInput Focus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "select PrevSuggestion", //code suggestion selection
+        "when": "vim.active && suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInput Focus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "vim.active && inQuickOpen" //top panel for filesearch and commands
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "vim.active && inQuickOpen" //top panel for filesearch and commands
+    },
+    {
         "key": "f7",
         "command": "-extension.CustomCompileRun"
     },
@@ -86,10 +115,10 @@
         },
         "when": "editorTextFocus && editorLangId == 'r' || terminalFocus"
     },
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.terminal.focus"
-    },
+    // {
+    //     "key": "ctrl+j",
+    //     "command": "workbench.action.terminal.focus"
+    // },
     {
         "key": "ctrl+j",
         "command": "workbench.action.focusActiveEditorGroup",
@@ -367,5 +396,10 @@
     {
         "key": "ctrl+alt+left",
         "command": "-workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
     }
 ]

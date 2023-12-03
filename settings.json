@@ -40,8 +40,8 @@
     "python.analysis.inlayHints.callArgumentNames": "partial",
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.pytestParameters": true,
-    "python.analysis.inlayHints.variableTypes": true,
-    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.inlayHints.variableTypes": false,
+    "python.analysis.typeCheckingMode": "basic",
     "r.bracketedPaste": true,
     "r.plot.defaults.plotPreviewLayout": "scroll",
     "r.plot.useHttpgd": true,
@@ -97,6 +97,7 @@
     "vim.easymotion": true,
     "window.restoreWindows": "all",
     "workbench.startupEditor": "none",
+    "terminal.integrated.inheritEnv": false,
     // "vim.vimrc.enable": true,
     // "vim.vimrc.path": ".vimrc"
 }
