@@ -85,7 +85,12 @@
             "before": "+p"
         }
     ],
-    // "vim."
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "after": "<leader>p",
+            "before": "\"_dP"
+        }
+    ],
     "vim.smartRelativeLine": true,
     "vim.useSystemClipboard": false,
     "vscode-office.openOutline": true,
