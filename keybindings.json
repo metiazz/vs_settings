@@ -1,27 +1,13 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
-        "key": "f7",
-        "command": "-extension.CustomCompileRun"
-    },
-    {
         "key": "alt+j",
         "command": "editor.action.moveLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "alt+down",
-        "command": "-editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
         "key": "alt+k",
         "command": "editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+up",
-        "command": "-editor.action.moveLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
@@ -37,7 +23,7 @@
     {
         "key": "shift+enter",
         "command": "r.runSelection",
-        "when": "editorTextFocus && editorLangId == 'rmd'"
+        "when": "editorTextFocus && (editorLangId == 'rmd' || editorLangId == 'quarto') "
     },
     {
         "key": "ctrl+enter",
@@ -60,15 +46,6 @@
         "args": {
             "text": "<- "
         },
-        "when": "editorTextFocus && editorLangId == 'rmd' || terminalFocus"
-    },
-    {
-        "key": "alt+,",
-        "command": "type",
-        "args": {
-            "text": "<- "
-        },
-        "when": "editorTextFocus && editorLangId == 'r' || terminalFocus"
     },
     {
         "key": "alt+.",
@@ -76,24 +53,6 @@
         "args": {
             "text": "%>% "
         },
-        "when": "editorTextFocus && editorLangId == 'rmd' || terminalFocus"
-    },
-    {
-        "key": "alt+.",
-        "command": "type",
-        "args": {
-            "text": "%>% "
-        },
-        "when": "editorTextFocus && editorLangId == 'r' || terminalFocus"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.terminal.focus"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "terminalFocus"
     },
     {
         "key": "ctrl+d",
@@ -101,9 +60,9 @@
         "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
     },
     {
-        "key": "v v",
+        "key": "ctrl+alt+v",
         "command": "extension.vim_ctrl+v",
-        "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl && vim.mode != 'Insert'"
+        "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl && (vim.mode == 'Normal' || vim.mode == 'Visual')"
     },
     {
         "key": "ctrl+v",
@@ -111,8 +70,263 @@
         "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl"
     },
     {
-        "key": "alt+j",
-        "command": "workbench.action.terminal.focusNextPane",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+        "key": "shift+alt+f",
+        "command": "editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-notebook.centerActiveCell",
+        "when": "notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "extension.vim_ctrl+d"
+    },
+    {
+        "key": "space shift+h",
+        "command": "vscode-harpoon.addEditor",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space shift+a",
+        "command": "vscode-harpoon.addEditor1",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space shift+s",
+        "command": "vscode-harpoon.addEditor2",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space shift+d",
+        "command": "vscode-harpoon.addEditor3",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space shift+f",
+        "command": "vscode-harpoon.addEditor4",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space shift+g",
+        "command": "vscode-harpoon.addEditor5",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space h",
+        "command": "vscode-harpoon.editorQuickPick",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space a",
+        "command": "vscode-harpoon.gotoEditor1",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space s",
+        "command": "vscode-harpoon.gotoEditor2",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space d",
+        "command": "vscode-harpoon.gotoEditor3",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space f",
+        "command": "vscode-harpoon.gotoEditor4",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "space g",
+        "command": "vscode-harpoon.gotoEditor5",
+        "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "g d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && isWeb && !isInEmbeddedEditor &&editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "g d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor && editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "g i",
+        "command": "editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor && editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "g q",
+        "command": "editor.action.quickFix",
+        "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor && editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "g shift+i",
+        "command": "editor.action.peekImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor && editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "g r",
+        "command": "references-view.findReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "g b",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack && editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "g h",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus && !isInEmbeddedEditor && editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    },
+    {
+        "key": "alt+ctrl+k",
+        "command": "workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "alt+ctrl+j",
+        "command": "workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.focusRightGroup",
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.focusLeftGroup",
+    },
+    {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "ctrl+'",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+shift+'",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+shift+`",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "command": "runCommands",
+        "key": "pagedown",
+        "args": {
+            "commands": [
+                {
+                    "command": "editorScroll",
+                    "args": {
+                        "to": "down",
+                        "by": "line",
+                        "revealCursor": true,
+                        "value": 20
+                    },
+                },
+                {
+                    "command": "cursorMove",
+                    "args": {
+                        "to": "viewPortCenter"
+                    }
+                }
+            ]
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "command": "runCommands",
+        "key": "pageup",
+        "args": {
+            "commands": [
+                {
+                    "command": "editorScroll",
+                    "args": {
+                        "to": "up",
+                        "by": "line",
+                        "revealCursor": true,
+                        "value": 20
+                    },
+                },
+                {
+                    "command": "cursorMove",
+                    "args": {
+                        "to": "viewPortCenter"
+                    }
+                }
+            ]
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+9",
+        "command": "type",
+        "args": {
+            "text": "["
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+alt+9",
+        "command": "type",
+        "args": {
+            "text": "{"
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+0",
+        "command": "type",
+        "args": {
+            "text": "]"
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+alt+0",
+        "command": "type",
+        "args": {
+            "text": "}"
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+n",
+        "command": "explorer.newFile",
+        "when": "explorerViewletVisible && !inputFocus"
+    },
+    {
+        "key": "shift+f",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletVisible && !inputFocus"
     }
 ]
