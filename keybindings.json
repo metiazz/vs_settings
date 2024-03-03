@@ -328,5 +328,35 @@
         "key": "shift+f",
         "command": "explorer.newFolder",
         "when": "explorerViewletVisible && !inputFocus"
-    }
+    },
+    {
+        "key": "ctrl+shift+h",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+ctrl+shift+j",
+        "command": "workbench.action.previousEditor",
+        "when": "!terminalFocus && !panelFocus"
+    },
+    {
+        "key": "alt+ctrl+shift+k",
+        "command": "workbench.action.nextEditor",
+        "when": "!terminalFocus && !panelFocus"
+    },
 ]

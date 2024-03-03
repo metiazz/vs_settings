@@ -2,7 +2,7 @@
     "editor.codeActionsOnSave": {
         "source.organizeImports": "explicit"
     },
-    "editor.fontSize": 18,
+    "editor.fontSize": 15,
     "editor.formatOnSave": true,
     "editor.rulers": [
         80,
@@ -99,4 +99,14 @@
     "vim.highlightedyank.color": "#a9dc7660",
     "vim.highlightedyank.duration": 250,
     "window.zoomLevel": -1,
+    "terminal.integrated.fontSize": 15,
+    "ruff.lint.args": [
+        "--config=/home/amti/.config/Code/User/ruff.toml"
+    ],
+    "ruff.format.args": [
+        "--config=/home/amti/.config/Code/User/ruff.toml"
+    ],
+    "python.analysis.ignore": [
+        "*"
+    ]
 }
